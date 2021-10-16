@@ -1,0 +1,9 @@
+﻿@model object
+
+<form asp-action="Update" method="post">
+    <label for="Name">@ViewBag.parameterName</label>
+    <input name="key" type="text" value="@Model" id="Name" /><br />
+
+    <input type="hidden" name ="parameterName" value="@ViewBag.parameterName" />
+    <button type="submit">Update</button>
+</form>

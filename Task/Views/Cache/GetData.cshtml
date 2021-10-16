@@ -1,0 +1,18 @@
+﻿@model Object
+
+<h4>@ViewBag.key: @Model</h4>
+@if (Model != null)
+{
+    <h5>Do you want to remove this data?</h5>
+    <form asp-action="Delete" method="get">
+        <input name="key" type="radio" value="@ViewBag.key" id="operation" /><br />
+        <button type="submit">Yes</button>
+    </form>
+
+    <h5>Do you want to update this data?</h5>
+    <form asp-action="Update" method="get">
+        <input name="parameterName" type="radio" value="@ViewBag.key" id="operation" /><br />
+        <button type="submit">Yes</button>
+    </form>
+}
+<a href="~/cache/index">Go back</a>
